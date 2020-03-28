@@ -1,0 +1,832 @@
+body, div, ul, p {
+	margin: 0;
+	padding: 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	font-family: helvetica, roboto;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.topHeader {
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: rgba(90, 48, 186, 0.55);
+	color: black;
+	font-family: gabriola;
+	font-size: 50px;
+	text-shadow: 0px 5px 5px #a2838a;
+	letter-spacing: 3px;
+}
+
+#araLogo {
+	height: 10vh;
+}
+
+.nav {
+	position: absolute;
+	width: 100%;
+	z-index: 11;
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	list-style-type: none;
+	-webkit-transition: background-color 1s;
+	transition: background-color 2s;
+}
+/*
+@keyframes navigation {
+	0% {background-color: black;}
+	33% {background-color: #5a30ba8c;}
+	65% {background-color: #26511e;}
+	100% {background-color: black;}
+}
+
+.navigation:hover {
+	animation: subscribe 3s ease-in-out 0s infinite;
+}
+*/
+.navigation:hover {
+	background-color: black;
+}
+
+.navigation li {
+	padding: 15px;
+}
+
+.navigation a:link, .navigation a:visited {
+	text-shadow: 2px 4px 5px black;
+	color: #fff;
+	font-size: 22px;
+	font-family: gabriola;
+	transition: border-bottom 1s ease-out 0.2s;
+}
+
+.navigation a.active {
+	border-bottom: 1px solid #fff;
+}
+
+.navigation a:hover {
+	border-bottom: 1px solid #fff;
+}
+
+.banner {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+#img1 {
+	width: 100%;
+	height: 80vh;
+}
+
+.bannerTxt {
+	position: absolute;
+	z-index: 5;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	width: 100%;
+	height: 80vh;
+}
+
+#bannerText {
+	width: 35%;
+	text-align: center;
+/*	background: rgba(131, 84, 252, 0.69); */
+	padding: 50px;
+	color: #fff491;
+	font-size: 22px;
+	font-family: constantia;
+	text-shadow: 0px 5px 10px black;
+	line-height: 35px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.direction {
+	color: #2caf13;
+	position: absolute;
+	z-index: 10;
+	display: flex;
+	flex-flow:  row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 80vh;
+	font-size: 100px;
+}
+
+#leftArrow, #rightArrow {
+	padding: 0 5%;
+}
+
+.content {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 80vh;
+}
+
+.who-we-are {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 20px 0;
+	border-bottom: 2px dashed #2eaf14;
+}
+
+.who-we-are-text {
+	color: grey;
+	line-height: 30px;
+	text-align: justify;
+	padding-right: 20px;
+}
+
+#headerTxt {
+	color: #c00808;
+	text-align: center;
+	letter-spacing: 3px;
+	font-size: 28px;
+	font-family: gabriola;
+}
+
+#txt {
+	font-size: 18px;
+}
+
+#araPic {
+	width: 250px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.fieldServices {
+	margin-top: 70px;
+	border: none;
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+
+.what-we-do {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 20px 0;
+}
+
+#services {
+	text-align: center;
+	font-size: 25px;
+	font-family: corbel;
+	color: #2eaf14;
+}
+
+.serviceDiv {
+	width: 35%;
+	text-align: justify;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	transition: background-color 1s ease-in;
+}
+
+.serviceDiv h3 {
+	color: #c00808;
+	text-align: center;
+	letter-spacing: 1px;
+	font-family: gabriola;
+	font-size: 30px;
+	margin: 20px 0;
+	-webkit-transition: -webkit-transform 2s 0.5s;
+	transition: transform 2s 0.5s;
+}
+	`	
+.serviceDiv:hover h3 {
+	-webkit-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
+
+.serviceDiv:hover img {
+	width: 120px;
+	height: 120px;
+	-webkit-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+}
+
+#imagge {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0 0 0;
+}
+
+.imag {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	-webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+	transition: width 1s, height 1s 0s, transform 1s 0s;
+}
+
+.serviceDiv:hover {
+	background-color: #3c3940;
+}
+
+.serviceDiv p {
+	color: gray;
+	line-height: 32px;
+	font-size: 18px;
+	transition: font-size 1s 0s;
+}
+
+.footer {
+	background-color: #0e0000;
+	color: gray;
+}
+
+.contact {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 50px 100px;
+	margin-top: 100px;
+}
+
+.contact a:link, .contact a:visited {
+	color: gray;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.contact a:hover {
+	color: #fff;
+}
+
+.contact h3 {
+	font-size: 25px;
+	color: #fff;
+	margin-top: 0;
+}
+
+#social {
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.contactd {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.socialConnect a {
+	padding: 5px;
+	border: 1px solid rgba(128, 128, 128, 0.4);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 15px 0 0;
+}
+
+.contact p {
+	line-height: 35px;
+	font-size: 16px;
+}
+
+#email {
+	color: white;
+	padding: 5px;
+}
+
+.subscribe {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#sub {
+	margin: 20px 0 5px 0;
+}
+
+#email {
+	background-color: transparent;
+	border: 0px;
+	border-bottom: 1px solid #fff;
+}
+
+#subPic {
+	width: 120px;
+}
+
+#subButton {
+	background-color: white;
+	color: #00bd02;
+	border: none;
+	padding: 6px 12px;
+}
+
+#subButton:hover {
+	background-color: #c00808;
+	color: #fff;
+}
+
+#copyright {
+	background-color: #6e836a;
+	padding: 30px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+
+/* for iPad Pro */
+
+@media only screen and (max-width: 800px) {
+	.topHeader {
+		height: 8vh;
+		font-size: 35px;
+		letter-spacing: 1px;
+	}
+
+	#araLogo {
+		height: 5vh;
+	}
+	
+	.navigation li {
+		padding: 8px;
+	}
+
+	.navigation a:link, .navigation a:visited {
+		text-shadow: none;
+		color: #fff;
+		font-size: 20px;
+	}
+	
+	#img1, .bannerTxt {
+		height: 60vh;
+	}
+	
+	.bannerTxt {
+		justify-content: center;
+		align-items: center;
+	}
+
+	#bannerText {
+		width: 50%;
+		padding: 12px;
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	.direction {
+		height: 60vh;
+		font-size: 80px;
+	}
+	
+	.content {
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 60vh;
+	}
+
+	.who-we-are {
+		padding: 10px 0;
+		border-bottom: 1px dashed #2eaf14;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+
+	.who-we-are-text {
+		line-height: 0px;
+		padding-right: 0px;
+	}
+
+	#headerTxt {
+		letter-spacing: 3px;
+		font-size: 30px;
+	}
+	
+	#txt {
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	#araPic {
+		width: 150px;
+	}
+
+	.fieldServices {
+		margin-top: 70px;
+		border: none;
+	}
+
+	.what-we-do, .what-we-do-2 {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+		padding: 10px 0;
+		border-bottom: 2px dashed #2eaf14;
+	}
+
+	#services {
+		font-size: 33px;
+	}
+
+	.what-we-do {
+		border-bottom: 0px;
+	}
+
+	.serviceDiv {
+		width: 45%;
+		padding: 10px 0px;
+		transition: none;
+	}
+
+	.serviceDiv:hover {
+		background-color: #fff;
+	}
+	
+	.serviceDiv h3 {
+		letter-spacing: 0px;
+		font-size: 30px;
+		margin: 20px 0 0px 0;
+		-webkit-transition: none;
+		transition: none;
+	}
+
+	.serviceDiv:hover img {
+		width: 100px;
+		height: 100px;
+	}
+
+	#imagge {
+		padding: 10px 0 0 0;
+	}
+
+	.imag {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		-webkit-transition: none;
+		transition: none;
+	}
+
+	.serviceDiv:hover img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.serviceDiv p {
+		line-height: 33px;
+		font-size: 22px;
+	}
+
+	.serviceDiv:hover p {
+		color: gray;
+	}
+
+	.contact {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		padding: 30px;
+		margin-top: 20px;
+	}
+
+	.contact a:link, .contact a:visited {
+		color: gray;
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	.contact h3 {
+		font-size: 23px;
+		margin-top: 0;
+	}
+
+	#social {
+		font-size: 18px;
+		margin: 10px 0;
+	}
+
+	.contactd {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+		padding: 15px 0;
+	}
+	
+	.contactd h3 {
+		margin: 0;
+	}
+	
+	.contact p {
+		line-height: 30px;
+		font-size: 22px;
+	}
+
+	.subscribe {
+		padding: 10px 0;
+	}
+
+	#sub {
+		margin: 20px 0 5px 0;
+	}
+
+	#email {
+		background-color: transparent;
+		border: 0px;
+		border-bottom: 1px solid #fff;
+	}
+
+	#subPic {
+		width: 100px;
+	}
+
+	#subButton {
+		background-color: white;
+		color: #00bd02;
+		border: none;
+		padding: 6px 12px;
+	}
+
+	#subButton:hover {
+		background-color: #c00808;
+		color: #fff;
+	}
+
+	#copyright {
+		background-color: #6e836a;
+		padding: 30px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+	}
+
+}
+
+/* for phone */
+
+@media only screen and (max-width: 650px) {
+	.topHeader {
+		height: 8vh;
+		font-size: 30px;
+		text-shadow: 0px 2px 2px #a2838a;
+		letter-spacing: 0px;
+	}
+
+	#araLogo {
+		height: 5vh;
+	}
+	
+	#img1, .bannerTxt {
+		height: 50vh;
+	}
+	
+	.navigation:hover {
+		animation: none;
+		background-color: black;
+	}
+
+	.navigation li {
+		padding: 5px;
+	}
+
+	.navigation a:link, .navigation a:visited {
+		text-shadow: 0;
+		font-size: 16px;
+		transition: border-bottom 1s ease-out 0.3s;
+	}
+	
+	#bannerText {
+		width: 70%;
+		padding: 0px;
+		font-size: 16px;
+		text-shadow: 0px 2px 4px black;
+		line-height: 25px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		padding: 5px;
+	}
+	
+	.direction {
+		height: 50vh;
+		font-size: 30px;
+	}
+
+	#leftArrow, #rightArrow {
+		padding: 0 2%;
+	}
+	
+	.content {
+		width: 100%;
+		margin: 0;
+		margin-top: 50vh;
+	}
+	
+	.who-we-are {
+		flex-flow: row wrap;
+		padding: 0 0 10px 0;
+		border-bottom: 1px dashed #c00808;
+	}
+	
+	.who-we-are-text {
+		color: grey;
+		line-height: 0px;
+		padding: 0 10px;
+	}
+
+	#headerTxt {
+		letter-spacing: 0;
+		font-size: 20px;
+	}
+
+	#txt {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	
+	#araPic {
+		display: none;
+	}
+
+	.fieldServices {
+		margin-top: 15px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		border: none;
+	}
+
+	.what-we-do, .what-we-do-2 {
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0px;
+		border: none;
+	}
+	
+	#services {
+		font-size: 20px;
+	}
+
+	.what-we-do, .what-we-do-2 {
+		border-bottom: 0px;
+	}
+
+	.what-we-do div, .what-we-do-2 div {
+		width: 100%;
+		padding: 15px 0;
+		transition: none;
+	}
+	
+	.what-we-do div:last-child {
+		padding-bottom: 0px;
+	}
+
+	.what-we-do div:hover:not(#imagge), .what-we-do-2 div:hover {
+		background-color: #fff;
+	}
+	
+	#imagge {
+		padding: 5px 0 0 0;
+	}
+
+	#audioPic, #videoPic, #graphicsPic, #mixerPic, #trainingPic, #consultancy, #repair, #rentage {
+		width: 60px;
+		height: 60px;
+		-webkit-transition: none;
+		transition: none;
+	}
+
+	#audioPic:hover, #videoPic:hover, #graphicsPic:hover, #mixerPic:hover, #trainingPic:hover, #consultancy:hover, #repair:hover, #rentage:hover {
+		width: 60px;
+		height: 60px;
+	}
+	
+	.what-we-do h3, .what-we-do-2 h3 {
+		letter-spacing: 0px;
+		font-size: 20px;
+		margin: 0;
+		-webkit-transition: none;
+		transition: none;
+	}
+
+	.what-we-do h3:hover {
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	.what-we-do p, .what-we-do-2 p {
+		color: gray;
+		line-height: 25px;
+		font-size: 18px;
+	}
+	
+	.contact {
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding: 20px 10px;
+		margin-top: 30px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact a:link, .contact a:visited {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.contact h3 {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	#social {
+		font-size: 20px;
+		margin: 5px 0;
+	}
+
+	.contactd {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.socialConnect a {
+		padding: 5px;
+		border: 1px solid rgba(128, 128, 128, 0.4);
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		margin: 0 10px 0 0;
+	}
+
+	.contact p {
+		line-height: 26px;
+		font-size: 16px;
+	}
+	
+	#sub {
+		margin: 5px 0;
+	}
+
+	#subPic {
+		width: 60px;
+		margin-top: 5px;
+	}
+
+	#copyright {
+		padding: 15px;
+		font-size: 18px;
+	}
+}
+
+/* Subscibe.html */
+#wrappersub {
+	background-color: #a48dd9;
+	color: black;
+	font-size: 30px;
+	font-family: gabriola;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+}
+
+#wrapdiv {
+	width: 50%;
+}
+
+#wrapdiv a {
+	font-size: 25px;
+}
