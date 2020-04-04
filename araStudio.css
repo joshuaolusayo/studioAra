@@ -354,11 +354,21 @@ a:link, a:visited {
 }
 
 #copyright {
-	background-color: #6e836a;
+	background-color: #00bd02;
 	padding: 30px;
 	text-align: center;
 	font-size: 20px;
 	color: #fff;
+}
+
+#copyright a {
+	text-decoration: none;
+	color: #000;
+}
+
+#copyright a:hover {
+	color: #fff;
+	text-decoration: underline;
 }
 
 /* for iPad Pro */
